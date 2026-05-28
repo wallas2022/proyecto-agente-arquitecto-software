@@ -1,0 +1,133 @@
+<mxfile host="Electron" agent="Claude">
+  <diagram name="Mapa Mental SCM-CRM" id="scm-crm-mindmap">
+    <mxGraphModel dx="1157" dy="803" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e_crm_ben" edge="1" parent="1" source="crm" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="crm_ben">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_crm_obj" edge="1" parent="1" source="crm" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="crm_obj">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_crm_ej" edge="1" parent="1" source="crm" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="crm_ej">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_scm_ben" edge="1" parent="1" source="scm" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="scm_ben">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_scm_obj" edge="1" parent="1" source="scm" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="scm_obj">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_scm_ej" edge="1" parent="1" source="scm" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="scm_ej">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="central" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#000000;" value="SCM y CRM&#xa;Sistemas de Informacion" vertex="1">
+          <mxGeometry height="70" width="220" x="480" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="scm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#000000;" value="SCM&#xa;Supply Chain Management" vertex="1">
+          <mxGeometry height="60" width="220" x="120" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e_central_scm" edge="1" parent="1" source="central" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;" target="scm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="scm_prov" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Proveedores" vertex="1">
+          <mxGeometry height="40" width="120" x="10" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="scm_inv" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Inventario" vertex="1">
+          <mxGeometry height="40" width="120" x="280" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="scm_log" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Logistica" vertex="1">
+          <mxGeometry height="40" width="120" x="460" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="e_scm_prov" edge="1" parent="1" source="scm" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="scm_prov">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_scm_inv" edge="1" parent="1" source="scm" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="scm_inv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_scm_log" edge="1" parent="1" source="scm" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="scm_log">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="scm_compras" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" value="Compras" vertex="1">
+          <mxGeometry height="36" width="120" x="10" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="scm_alm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" value="Almacen" vertex="1">
+          <mxGeometry height="36" width="120" x="280" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="scm_dist" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" value="Distribucion" vertex="1">
+          <mxGeometry height="36" width="120" x="460" y="316" as="geometry" />
+        </mxCell>
+        <mxCell id="e_scm_prov_compras" edge="1" parent="1" source="scm_prov" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="scm_compras">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_scm_inv_alm" edge="1" parent="1" source="scm_inv" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="scm_alm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_scm_log_dist" edge="1" parent="1" source="scm_log" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="scm_dist">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="scm_obj" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;dashed=1;fontSize=11;fontColor=#000000;" value="Objetivo&#xa;Optimizar el flujo de productos y costos" vertex="1">
+          <mxGeometry height="60" width="220" x="120" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="scm_ben" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Beneficios&#xa;Reduccion de costos, eficiencia operativa" vertex="1">
+          <mxGeometry height="60" width="220" x="120" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="scm_ej" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Ejemplos&#xa;SAP SCM, Oracle SCM, Microsoft Dynamics" vertex="1">
+          <mxGeometry height="60" width="220" x="120" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="crm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#000000;" value="CRM&#xa;Customer Relationship Management" vertex="1">
+          <mxGeometry height="60" width="240" x="780" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="e_central_crm" edge="1" parent="1" source="central" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;" target="crm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="crm_cli" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Clientes" vertex="1">
+          <mxGeometry height="40" width="120" x="640" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="crm_ven" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Ventas" vertex="1">
+          <mxGeometry height="40" width="120" x="840" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="crm_mkt" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Marketing" vertex="1">
+          <mxGeometry height="40" width="120" x="1030" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="e_crm_cli" edge="1" parent="1" source="crm" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="crm_cli">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_crm_ven" edge="1" parent="1" source="crm" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="crm_ven">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_crm_mkt" edge="1" parent="1" source="crm" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="crm_mkt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="crm_fid" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" value="Fidelizacion" vertex="1">
+          <mxGeometry height="36" width="120" x="640" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="crm_seg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" value="Seguimiento" vertex="1">
+          <mxGeometry height="36" width="120" x="840" y="377" as="geometry" />
+        </mxCell>
+        <mxCell id="crm_cam" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" value="Campanas" vertex="1">
+          <mxGeometry height="36" width="120" x="1030" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="e_crm_cli_fid" edge="1" parent="1" source="crm_cli" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="crm_fid">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_crm_ven_seg" edge="1" parent="1" source="crm_ven" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="crm_seg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_crm_mkt_cam" edge="1" parent="1" source="crm_mkt" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="crm_cam">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="crm_obj" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;dashed=1;fontSize=11;fontColor=#000000;" value="Objetivo&#xa;Gestionar relaciones y satisfaccion del cliente" vertex="1">
+          <mxGeometry height="60" width="240" x="1169" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="crm_ben" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Beneficios&#xa;Mayor retencion y conocimiento del cliente" vertex="1">
+          <mxGeometry height="60" width="240" x="1160" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="crm_ej" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Ejemplos&#xa;Salesforce, HubSpot, Zoho CRM" vertex="1">
+          <mxGeometry height="60" width="240" x="1160" y="200" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,35 @@
+# ===== Claves y secretos (NUNCA subir) =====
+.env
+
+# ===== Entornos virtuales =====
+venv/
+venv311/
+env/
+.venv/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ===== Base vectorial (se regenera con indexer.py) =====
+vectorstore/
+
+# ===== Audio temporal =====
+audio/
+
+# ===== Modelos descargados =====
+*.bin
+*.pt
+
+# ===== Sistema operativo =====
+.DS_Store
+Thumbs.db
+
+# ===== Editores =====
+.vscode/
+.idea/
+
+# ===== Datos sensibles (opcional - descomenta si no quieres subir tus datos) =====
+# data/

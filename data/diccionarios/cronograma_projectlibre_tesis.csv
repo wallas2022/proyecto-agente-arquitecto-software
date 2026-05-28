@@ -1,0 +1,50 @@
+﻿ID,WBS,Outline Level,Task Name,Start,Finish,Duration,Predecessors,Resource Names,Notes
+1,1,1,Fase de Inicio,2026-03-14,2026-04-03,21d,,Equipo de proyecto,Fase RUP para definición inicial
+2,1.1,2,Inicio del proyecto y definición del alcance,2026-03-14,2026-03-17,4d,,Analista,Kickoff y delimitación del proyecto
+3,1.2,2,Planteamiento del problema,2026-03-18,2026-03-20,3d,2,Analista,Documentar problemática y situación actual
+4,1.3,2,"Justificación, objetivos e hipótesis",2026-03-23,2026-03-27,5d,3,Analista,Redacción de fundamentos del proyecto
+5,1.4,2,Identificación de actores y alcance funcional,2026-03-30,2026-03-31,2d,4,Analista,Actores del sistema y módulos principales
+6,1.5,2,Documento de visión y alcance RUP,2026-04-01,2026-04-03,3d,5,Analista,Cierre de fase de inicio
+7,2,1,Fase de Elaboración,2026-04-06,2026-05-15,40d,6,Equipo de proyecto,"Análisis, diseño base y arquitectura"
+8,2.1,2,Levantamiento de requerimientos por módulo,2026-04-06,2026-04-10,5d,6,Analista,Requerimientos estilo DERCAS
+9,2.2,2,Diseño de arquitectura general,2026-04-13,2026-04-17,5d,8,Arquitecto / Desarrollador,"Frontend, backend, BD y servicio OCR"
+10,2.3,2,Diseño del modelo de datos general,2026-04-20,2026-04-24,5d,9,DBA / Desarrollador,Entidades principales del sistema
+11,2.4,2,Diseño de prototipos y navegación base,2026-04-27,2026-05-01,5d,10,Frontend,"Layout, rutas, sidebar y pantallas base"
+12,2.5,2,Análisis de factibilidad y riesgos,2026-05-04,2026-05-08,5d,11,Analista,"Técnica, operativa, económica y legal"
+13,2.6,2,Plan iterativo de construcción,2026-05-11,2026-05-15,5d,12,Equipo de proyecto,Definición de iteraciones RUP
+14,3,1,Fase de Construcción,2026-05-18,2026-09-25,131d,13,Equipo de desarrollo,Desarrollo incremental de módulos
+15,3.1,2,Iteración I - Módulo de Usuarios y Seguridad,2026-05-18,2026-06-05,19d,13,Backend / Frontend,"Autenticación, roles y permisos"
+16,3.1.1,3,"Backend de autenticación, usuarios y permisos",2026-05-18,2026-05-26,9d,13,Backend,"AuthController, UsersService, RolesService"
+17,3.1.2,3,"Frontend de login, usuarios y matriz de accesos",2026-05-27,2026-06-02,7d,16,Frontend,Pantallas protegidas y menú por permisos
+18,3.1.3,3,Pruebas del módulo de seguridad,2026-06-03,2026-06-05,3d,17,QA,"Login, rutas protegidas y permisos"
+19,3.2,2,Iteración II - Módulo de Solicitudes de Gasto,2026-06-08,2026-06-26,19d,18,Backend / Frontend,"Solicitud, ítems y cálculo de total"
+20,3.2.1,3,Diseño y desarrollo de formularios de solicitud,2026-06-08,2026-06-15,8d,18,Frontend,"Listado, nueva solicitud y detalle"
+21,3.2.2,3,Servicios backend y reglas de solicitudes,2026-06-16,2026-06-23,8d,20,Backend,"DTOs, servicios y persistencia"
+22,3.2.3,3,Pruebas de solicitudes de gasto,2026-06-24,2026-06-26,3d,21,QA,"Creación, edición y envío a aprobación"
+23,3.3,2,Iteración III - Módulo de Control Presupuestario,2026-06-29,2026-07-17,19d,22,Backend / Frontend,Presupuesto disponible y movimientos
+24,3.3.1,3,Modelo y servicios de presupuesto,2026-06-29,2026-07-07,9d,22,Backend / DBA,"Budgets, rubros y movimientos"
+25,3.3.2,3,Pantallas de consulta y validación presupuestaria,2026-07-08,2026-07-14,7d,24,Frontend,"Disponibilidad, filtros y alertas"
+26,3.3.3,3,Pruebas de validación presupuestaria,2026-07-15,2026-07-17,3d,25,QA,Presupuesto suficiente e insuficiente
+27,3.4,2,Iteración IV - Módulo OCR y Documentos,2026-07-20,2026-08-14,26d,26,Backend / Frontend / Python,"Carga, extracción, revisión y confirmación"
+28,3.4.1,3,Carga y almacenamiento de documentos,2026-07-20,2026-07-27,8d,26,Backend / Frontend,"PDF, imágenes, S3/MinIO"
+29,3.4.2,3,Microservicio OCR y extracción de campos,2026-07-28,2026-08-05,9d,28,Python,"Extracción de texto, NIT, total, IVA y fecha"
+30,3.4.3,3,Pantalla de revisión y confirmación OCR,2026-08-06,2026-08-11,6d,29,Frontend,Corrección manual y confirmación
+31,3.4.4,3,Pruebas del flujo OCR,2026-08-12,2026-08-14,3d,30,QA,"Estados, extracción y confirmación"
+32,3.5,2,Iteración V - Módulo de Aprobaciones por Roles,2026-08-17,2026-09-04,19d,31,Backend / Frontend,"Bandeja, aprobación y bitácora"
+33,3.5.1,3,Flujo y reglas de aprobación,2026-08-17,2026-08-25,9d,31,Backend,"Estados, aprobadores y logs"
+34,3.5.2,3,Pantallas de bandeja y detalle de aprobación,2026-08-26,2026-09-01,7d,33,Frontend,"Aprobar, rechazar y comentar"
+35,3.5.3,3,Pruebas de aprobaciones,2026-09-02,2026-09-04,3d,34,QA,"Permisos, aprobación y rechazo"
+36,3.6,2,Iteración VI - Módulo de Liquidación y Conciliación,2026-09-07,2026-09-18,12d,35,Backend / Frontend,Comparación aprobado vs ejecutado
+37,3.6.1,3,Servicios de liquidación y asociación de documentos,2026-09-07,2026-09-11,5d,35,Backend,Liquidation y LiquidationDocument
+38,3.6.2,3,Pantallas de liquidación y conciliación,2026-09-14,2026-09-16,3d,37,Frontend,"Aprobado, ejecutado y diferencia"
+39,3.6.3,3,Pruebas de liquidación y conciliación,2026-09-17,2026-09-18,2d,38,QA,Documentos confirmados y cálculo de diferencia
+40,3.7,2,Iteración VII - Reportes y Trazabilidad,2026-09-21,2026-09-25,5d,39,Backend / Frontend,"Dashboard, reportes y bitácora"
+41,3.7.1,3,Dashboard y reportes principales,2026-09-21,2026-09-23,3d,39,Frontend / Backend,Indicadores y filtros
+42,3.7.2,3,Bitácora de eventos y pruebas de reportes,2026-09-24,2026-09-25,2d,41,QA,Trazabilidad y resultados filtrados
+43,4,1,Fase de Transición,2026-09-28,2026-10-30,33d,42,Equipo de proyecto,"Integración, documentación y entrega"
+44,4.1,2,Integración general de módulos,2026-09-28,2026-10-02,5d,42,Equipo de desarrollo,Validación del flujo completo
+45,4.2,2,Pruebas funcionales e integrales,2026-10-05,2026-10-09,5d,44,QA,Pruebas de punta a punta
+46,4.3,2,Corrección de errores y ajustes finales,2026-10-12,2026-10-16,5d,45,Equipo de desarrollo,Correcciones y refinamiento
+47,4.4,2,Redacción y ajuste del Capítulo IV,2026-10-19,2026-10-23,5d,46,Analista,Iteraciones RUP y evidencias
+48,4.5,2,Preparación de presentación y demo,2026-10-26,2026-10-29,4d,47,Equipo de proyecto,PowerPoint y guion de demostración
+49,4.6,2,Entrega final del proyecto,2026-10-30,2026-10-30,1d,48,Equipo de proyecto,Hito final

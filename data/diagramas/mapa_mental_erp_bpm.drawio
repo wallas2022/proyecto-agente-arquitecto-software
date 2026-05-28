@@ -1,0 +1,133 @@
+<mxfile host="Electron" agent="Claude">
+  <diagram name="Mapa Mental ERP-BPM" id="erp-bpm-mindmap">
+    <mxGraphModel dx="2326" dy="1629" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="central" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#000000;" value="ERP y BPM&#xa;Sistemas de Informacion" vertex="1">
+          <mxGeometry height="70" width="220" x="440" y="-190" as="geometry" />
+        </mxCell>
+        <mxCell id="erp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#000000;" value="ERP&#xa;Enterprise Resource Planning" vertex="1">
+          <mxGeometry height="60" width="220" x="110" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="e_central_erp" edge="1" parent="1" source="central" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;" target="erp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erp_fin" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Finanzas" vertex="1">
+          <mxGeometry height="40" width="120" x="-180" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="erp_rh" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="RRHH" vertex="1">
+          <mxGeometry height="40" width="120" x="-30" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="erp_prod" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Produccion" vertex="1">
+          <mxGeometry height="40" width="120" x="260" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="e_erp_fin" edge="1" parent="1" source="erp" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="erp_fin">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_erp_rh" edge="1" parent="1" source="erp" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="erp_rh">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_erp_prod" edge="1" parent="1" source="erp" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="erp_prod">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erp_cont" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" value="Contabilidad" vertex="1">
+          <mxGeometry height="36" width="120" x="-180" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="erp_nom" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" value="Nomina" vertex="1">
+          <mxGeometry height="36" width="120" x="-30" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="erp_inv" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" value="Inventarios" vertex="1">
+          <mxGeometry height="36" width="120" x="260" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="e_erp_fin_cont" edge="1" parent="1" source="erp_fin" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="erp_cont">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_erp_rh_nom" edge="1" parent="1" source="erp_rh" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="erp_nom">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_erp_prod_inv" edge="1" parent="1" source="erp_prod" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="erp_inv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erp_obj" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;dashed=1;fontSize=11;fontColor=#000000;" value="Objetivo&#xa;Integrar todos los procesos y recursos de la empresa" vertex="1">
+          <mxGeometry height="60" width="220" x="-360" y="-80" as="geometry" />
+        </mxCell>
+        <mxCell id="erp_ben" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Beneficios&#xa;Informacion centralizada, automatizacion y control" vertex="1">
+          <mxGeometry height="60" width="220" x="-360" y="-170" as="geometry" />
+        </mxCell>
+        <mxCell id="erp_ej" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Ejemplos&#xa;SAP, Oracle ERP, Odoo, Microsoft Dynamics" vertex="1">
+          <mxGeometry height="60" width="220" x="-360" y="-250" as="geometry" />
+        </mxCell>
+        <mxCell id="e_erp_obj" edge="1" parent="1" source="erp" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="erp_obj">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_erp_ben" edge="1" parent="1" source="erp" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="erp_ben">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_erp_ej" edge="1" parent="1" source="erp" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="erp_ej">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bpm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;fontStyle=1;fontColor=#000000;" value="BPM&#xa;Business Process Management" vertex="1">
+          <mxGeometry height="60" width="240" x="810" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="e_central_bpm" edge="1" parent="1" source="central" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.5;" target="bpm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bpm_mod" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Modelado" vertex="1">
+          <mxGeometry height="40" width="120" x="690" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="bpm_eje" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Ejecucion" vertex="1">
+          <mxGeometry height="40" width="120" x="850" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="bpm_mon" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Monitoreo" vertex="1">
+          <mxGeometry height="40" width="120" x="1190" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bpm_mod" edge="1" parent="1" source="bpm" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="bpm_mod">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bpm_eje" edge="1" parent="1" source="bpm" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="bpm_eje">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bpm_mon" edge="1" parent="1" source="bpm" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="bpm_mon">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bpm_dia" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" value="Diagramas" vertex="1">
+          <mxGeometry height="36" width="120" x="690" y="256" as="geometry" />
+        </mxCell>
+        <mxCell id="bpm_aut" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" value="Automatizar" vertex="1">
+          <mxGeometry height="36" width="120" x="850" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="bpm_ind" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" value="Indicadores" vertex="1">
+          <mxGeometry height="36" width="120" x="1190" y="256" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bpm_mod_dia" edge="1" parent="1" source="bpm_mod" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="bpm_dia">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bpm_eje_aut" edge="1" parent="1" source="bpm_eje" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="bpm_aut">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bpm_mon_ind" edge="1" parent="1" source="bpm_mon" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="bpm_ind">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bpm_obj" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;dashed=1;fontSize=11;fontColor=#000000;" value="Objetivo&#xa;Optimizar y automatizar los procesos de negocio" vertex="1">
+          <mxGeometry height="60" width="240" x="960" y="-190" as="geometry" />
+        </mxCell>
+        <mxCell id="bpm_ben" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Beneficios&#xa;Mejora continua, agilidad y reduccion de tiempos" vertex="1">
+          <mxGeometry height="60" width="240" x="1080" y="-120" as="geometry" />
+        </mxCell>
+        <mxCell id="bpm_ej" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#000000;" value="Ejemplos&#xa;Bizagi, Bonita BPM, IBM BPM, Camunda" vertex="1">
+          <mxGeometry height="60" width="240" x="1120" y="-20" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bpm_obj" edge="1" parent="1" source="bpm" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="bpm_obj">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bpm_ben" edge="1" parent="1" source="bpm" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="bpm_ben">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bpm_ej" edge="1" parent="1" source="bpm" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" target="bpm_ej">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
