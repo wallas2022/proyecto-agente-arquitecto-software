@@ -294,9 +294,9 @@ with col_nav:
     st.markdown('<p class="panel-title" style="margin-top:10px;">💡 Preguntas sugeridas</p>',
                 unsafe_allow_html=True)
     sugerencias = [
-        "¿Qué fases tiene el cronograma?",
-        "¿Qué componentes tiene la arquitectura?",
-        "¿Qué tablas maneja el sistema?",
+        "En una arquitectura distribuida donde los microservicios validan tokens JWT de forma descentralizada mediante llaves públicas (RS256), ¿qué estrategia diseñarías para revocar inmediatamente un token comprometido antes de que expire su Time-To-Live (TTL)?",
+        "¿Por qué es peligroso usar una estrategia de reintentos (Retry) simple ante una caída de base de datos y cómo soluciona el problema aplicar 'Exponential Backoff con Jitter'?",
+        "¿cómo estructurarías el paso de contexto utilizando OpenTelemetry para poder rastrear el ciclo de vida completo de la petición en Jaeger?",
     ]
     for sug in sugerencias:
         if st.button(sug, key=f"sug_{sug}", use_container_width=True):
