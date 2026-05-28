@@ -26,8 +26,8 @@ except ImportError:
     VOZ_DISPONIBLE = False
 
 st.set_page_config(
-    page_title="AI Architect Assistant - UMG",
-    page_icon="🧠",
+    page_title="Arquitecto de software Virtual- UMG",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -199,8 +199,8 @@ with col_titulo:
         <div class="header-flex">
             {logo_html}
             <div>
-                <p class="header-title">🧠 AI Architect Assistant</p>
-                <p class="header-subtitle">Tu arquitecto de software inteligente</p>
+                <p class="header-title">Arquitecto de software Virtual</p>
+                <p class="header-subtitle"></p>
             </div>
         </div>
     </div>
