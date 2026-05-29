@@ -1,0 +1,78 @@
+# Docker Compose para el entorno completo de MercaShop
+# Levanta: API + PostgreSQL + Redis
+
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: ../repos/mercashop-api
+      dockerfile: ../../infraestructura/Dockerfile
+    container_name: mercashop_api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://mercashop_user:mercashop_pass@postgres:5432/mercashop_db
+      REDIS_URL: redis://redis:6379/0
+      SECRET_KEY: ${SECRET_KEY}
+      STRIPE_API_KEY: ${STRIPE_API_KEY}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    networks:
+      - mercashop_net
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: mercashop_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: mercashop_db
+      POSTGRES_USER: mercashop_user
+      POSTGRES_PASSWORD: mercashop_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mercashop_user -d mercashop_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - mercashop_net
+
+  redis:
+    image: redis:7-alpine
+    container_name: mercashop_cache
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - mercashop_net
+
+  nginx:
+    image: nginx:alpine
+    container_name: mercashop_gateway
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - api
+    networks:
+      - mercashop_net
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  mercashop_net:
+    driver: bridge

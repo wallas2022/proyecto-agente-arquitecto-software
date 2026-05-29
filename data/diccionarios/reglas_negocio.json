@@ -1,0 +1,51 @@
+{
+  "sistema": "MercaShop",
+  "version": "1.0.0",
+  "reglas_de_negocio": {
+    "pedidos": {
+      "tasa_impuestos_iva": 0.12,
+      "moneda": "GTQ",
+      "umbral_envio_gratis": 500.00,
+      "costo_envio_estandar": 35.00,
+      "maximo_items_por_pedido": 50,
+      "tiempo_maximo_pendiente_horas": 24,
+      "transiciones_estado_validas": {
+        "pendiente": ["pagado", "cancelado"],
+        "pagado": ["enviado", "cancelado"],
+        "enviado": ["entregado"],
+        "entregado": [],
+        "cancelado": []
+      }
+    },
+    "usuarios": {
+      "longitud_minima_password": 8,
+      "requiere_email_valido": true,
+      "permite_registro_sin_telefono": true,
+      "tiempo_sesion_horas": 24
+    },
+    "productos": {
+      "precio_minimo": 0.01,
+      "stock_minimo_alerta": 10,
+      "permite_stock_negativo": false,
+      "categorias_activas": [
+        "Electronica", "Hogar", "Ropa", "Deportes",
+        "Libros", "Juguetes", "Belleza"
+      ]
+    },
+    "pagos": {
+      "metodos_aceptados": ["tarjeta", "paypal", "transferencia"],
+      "tolerancia_diferencia_monto": 0.01,
+      "permite_reembolso_parcial": false,
+      "plazo_reembolso_dias": 30,
+      "proveedor_principal": "Stripe"
+    }
+  },
+  "configuracion_tecnica": {
+    "base_de_datos": "PostgreSQL 15",
+    "cache": "Redis 7",
+    "framework_backend": "FastAPI 0.115",
+    "framework_frontend": "React 18",
+    "puerto_api": 8000,
+    "puerto_frontend": 3000
+  }
+}

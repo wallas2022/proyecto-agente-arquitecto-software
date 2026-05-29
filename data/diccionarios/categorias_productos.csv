@@ -1,0 +1,9 @@
+categoria_id,nombre,descripcion,activa
+1,Electronica,"Telefonos, computadoras, tablets y accesorios tecnologicos",true
+2,Hogar,"Articulos para el hogar, decoracion y muebles",true
+3,Ropa,"Ropa para hombre, mujer y nino",true
+4,Deportes,"Equipamiento deportivo y ropa deportiva",true
+5,Libros,"Libros fisicos y digitales de todas las categorias",true
+6,Juguetes,"Juguetes y juegos para todas las edades",true
+7,Belleza,"Productos de belleza y cuidado personal",true
+8,Alimentos,"Alimentos no perecederos y bebidas",false

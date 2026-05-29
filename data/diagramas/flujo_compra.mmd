@@ -1,0 +1,35 @@
+sequenceDiagram
+    autonumber
+    participant U as Usuario
+    participant F as Frontend
+    participant API as MercaShop API
+    participant DB as PostgreSQL
+    participant ST as Stripe
+    participant EM as SendGrid
+
+    U->>F: Selecciona productos y procede a pagar
+    F->>API: POST /api/usuarios/login
+    API->>DB: SELECT usuario WHERE email=?
+    DB-->>API: Datos usuario
+    API-->>F: Token JWT
+
+    F->>API: POST /api/pedidos (items, direccion)
+    API->>DB: Validar stock de productos
+    DB-->>API: Stock disponible
+    API->>API: calcular_total_pedido() - subtotal + IVA + envio
+    API->>DB: INSERT pedido (estado=pendiente)
+    API->>DB: INSERT detalle_pedidos
+    API->>DB: UPDATE stock productos
+    DB-->>API: OK
+    API-->>F: pedido_id + total calculado
+
+    F->>API: POST /api/pagos (pedido_id, metodo, monto)
+    API->>DB: SELECT pedido WHERE id=?
+    API->>ST: Procesar pago con tarjeta
+    ST-->>API: referencia + estado=completado
+    API->>DB: INSERT pago
+    API->>DB: UPDATE pedido SET estado=pagado
+    API->>EM: Enviar email de confirmacion
+    EM-->>U: Email "Compra exitosa"
+    API-->>F: Confirmacion de pago
+    F-->>U: Pantalla de exito

@@ -1,0 +1,99 @@
+<mxfile host="app.diagrams.net" modified="2026-05-29" agent="dataset" version="24.0.0">
+  <diagram name="Arquitectura MercaShop" id="arq-mercashop">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="titulo" value="MercaShop - Arquitectura del Sistema" style="text;html=1;align=center;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="20" width="400" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="usuario" value="Usuario (Navegador)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="40" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="frontend" value="Frontend Web&#xa;(React)" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="220" y="125" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="api_gateway" value="API Gateway&#xa;(Nginx)" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="450" y="125" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="api" value="MercaShop API&#xa;(FastAPI - Python 3.11)" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="240" width="160" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r_productos" value="Router&#xa;Productos" style="rounded=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="180" y="370" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r_usuarios" value="Router&#xa;Usuarios" style="rounded=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="320" y="370" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r_pedidos" value="Router&#xa;Pedidos" style="rounded=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="460" y="370" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r_pagos" value="Router&#xa;Pagos" style="rounded=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="600" y="370" width="110" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="db" value="PostgreSQL&#xa;mercashop_db" style="shape=cylinder3;whiteSpace=wrap;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="500" width="160" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cache" value="Redis&#xa;(Cache de sesiones)" style="shape=cylinder3;whiteSpace=wrap;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="600" y="500" width="160" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="stripe" value="Stripe&#xa;(Proveedor de pagos)" style="shape=cloud;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="780" y="240" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="email" value="SendGrid&#xa;(Notificaciones email)" style="shape=cloud;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="780" y="360" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" style="endArrow=classic;html=1;" edge="1" parent="1" source="usuario" target="frontend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="HTTPS" style="endArrow=classic;html=1;fontSize=10;" edge="1" parent="1" source="frontend" target="api_gateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="HTTP interno" style="endArrow=classic;html=1;fontSize=10;" edge="1" parent="1" source="api_gateway" target="api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="endArrow=classic;html=1;" edge="1" parent="1" source="api" target="r_productos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="endArrow=classic;html=1;" edge="1" parent="1" source="api" target="r_usuarios">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="endArrow=classic;html=1;" edge="1" parent="1" source="api" target="r_pedidos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="endArrow=classic;html=1;" edge="1" parent="1" source="api" target="r_pagos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="SQLAlchemy&#xa;async" style="endArrow=classic;html=1;fontSize=10;" edge="1" parent="1" source="r_pedidos" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="endArrow=classic;html=1;" edge="1" parent="1" source="r_productos" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" style="endArrow=classic;html=1;" edge="1" parent="1" source="r_usuarios" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="Sesiones JWT" style="endArrow=classic;html=1;fontSize=10;" edge="1" parent="1" source="r_usuarios" target="cache">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="API REST" style="endArrow=classic;html=1;fontSize=10;" edge="1" parent="1" source="r_pagos" target="stripe">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="Notif. compra" style="endArrow=classic;html=1;fontSize=10;" edge="1" parent="1" source="r_pedidos" target="email">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
